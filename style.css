@@ -1,0 +1,90 @@
+
+.groupContent {
+  padding: 1em 1em;
+  border : 1px black solid;
+}
+
+.photo {
+  text-align: center;
+}
+
+#firstName{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+.date{
+  color: #d48a6e;
+  font-weight: 500;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.social {
+  width: 30px;
+  height: 30px;
+  padding: 1em;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows   : 0.3fr 0.3fr 0.3fr 1fr 1fr 1fr 0.3fr;
+    grid-template-areas:
+      "name           name       photo"
+      "about          about      photo"
+      "education      education  skills"
+      "work           work       skills"
+      "work           work       skills"
+      "work           work       interests"
+      "cert           flow       interests";
+    grid-gap: 5px;
+  }
+
+  .groupContent {
+    padding: 0.5em 0.5em;
+    border : 1px black dashed;
+  }
+
+  .name {
+    grid-area: name;
+  }
+
+  .photo {
+    grid-area: photo;
+    text-align: center;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  .interests {
+    grid-area: interests;
+  }
+
+  .work {
+    grid-area: work;
+  }
+
+  .skills {
+    grid-area: skills;
+  }
+
+  .education {
+    grid-area: education;
+  }
+
+  .flow {
+    grid-area: flow;
+  }
+
+  .social {
+    width: 40px;
+    height: 40px;
+    padding: 1em;
+  }
+}
